@@ -65,6 +65,29 @@ t.test(small_class$math_scr, large_class$math_scr, conf.level = 0.9)
   # From the test, p-value = 0.001928 < 0.1 so we say this is statistically
   # significant and we choose to reject H(0).
 
+cov(schools$avginc, schools$math_scr)
+cov(schools$income, schools$math_scr)
 
+# part c, vi
+  # [1] 94.7795 is the covariance between avginc and math_scr
+  # [1] 94779.5 is the covariance between income and math_scr
+  # The two covariances are different. One of the properties of covariance
+  # is Cov(a + bX, Y) = b * Cov(X, Y), where in this case income is a 
+  # linear transformation of avginc because it is avginc * 1000. Therefore
+  # the covariance of income and math_scr is 1000 time the covariance of
+  # avginc an math_scr.
 
+cor(schools$avginc, schools$math_scr)
+cor(schools$income, schools$math_scr)
+
+# part c, vii
+  # [1] 0.6993981 is the correlation between avginc and math_scr
+  # [1] 0.6993981 is the correlation between income and math_scr
+  # The correlations are the same. In calculating correlation, 
+  # Cov(X, Y) / sqrt(Var(X) * Var(Y)), as seen in part vi, covariance
+  # of income and math_scr is 1000 times the covariance of avginc and
+  # math_scr. However, the variance of income is 1000^2 times the variance
+  # of avginc because Var(bX) = b^2 * Var(X). Therefore taking the sqrt,
+  # the denominator also increases by 1000, which cancels out, which is why
+  # the correlations are the same.
 
