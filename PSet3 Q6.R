@@ -1,9 +1,15 @@
 library(readxl)
 
 schools <- read_excel("caschool.xlsx")
+
+#part a
 dim(schools)
+
 # part a
+  # [1] 420 19
   # There are 420 observations in the data set
+
+#part b
 
 schools$income <- schools$avginc * 1000
 
@@ -26,6 +32,8 @@ sd(schools$income)
   # mean and sd of income are what I expected because under the linear
   # transformation of multiplied by 1000, mean and sd also get
   # multiplied by 1000, which is what we see here.
+
+#part c
 
 mean(schools$math_scr)
 
