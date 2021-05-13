@@ -58,4 +58,13 @@ verification <- lm(U2 ~ U1, data = residuals)
 
 verification
 
+    # By regressing smoker against the other non-birthweight variables and
+    # then birthweight by the other non-smoker variables, regressing
+    # the residuals against each other measure the effect directly between
+    # the two variables, controllng for the other variables in the model.
+    # Here we see that the estiamted effect from the Theorem is -217.6 when
+    # in part b, the coefficient for smoker was -217.58, so this 
+    # empiracally varifies the Frisch-Waugh Theorem.
+
+  
 
